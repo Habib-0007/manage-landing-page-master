@@ -1,0 +1,124 @@
+@import url("https://fonts.googleapis.com/css2?family=Be-Vietnam-Pro");
+
+* {
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	box-sizing: border-box;
+	font-family: "Be Vietnam Pro", sans-serif;
+}
+
+:root {
+	/* Primary */
+
+	--bright-red: hsl(12, 88%, 59%);
+	--dark-blue: hsl(228, 39%, 23%);
+
+	/* Neutral */
+
+	--dark-grayish-blue: hsl(227, 12%, 61%);
+	--very-dark-blue: hsl(233, 12%, 13%);
+	--very-pale-red: hsl(13, 100%, 96%);
+	--very-light-gray: hsl(0, 0%, 98%);
+}
+
+body {
+	background: var(--very-light-gray);
+}
+
+header {
+	padding: 20px 20px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: row;
+	width: 100%;
+}
+
+header img {
+	object-fit: cover;
+	/*width: 50px;
+	height: 50px; */
+	width: 150px;
+	display: block;
+}
+
+header ul.nav-links {
+	display: none;
+}
+
+header ul.nav-links li a {
+	text-decoration: none;
+	color: var(--dark-blue);
+	font-weight: bold;
+}
+
+header button {
+	display: none;
+}
+
+header i {
+	display: block;
+	color: var(--dark-blue);
+	font-weight: bold;
+	font-size: 1.5em;
+}
+
+header ul.nav-dropdown {
+	position: absolute;
+	width: 90%;
+	background: #fff;
+	list-style: none;
+	display: none;
+	justify-content: space-between;
+	align-items: center;
+	flex-direction: column;
+	gap: 20px;
+	top: 70px;
+	left: 50%;
+	transform: translateX(-50%);
+	box-shadow: 0px 0px 10px var(--dark-grayish-blue);
+	padding-block: 24px;
+	border-radius: 4px;
+}
+
+header ul.nav-dropdown.show {
+	display: flex;
+}
+
+header ul.nav-dropdown li a {
+	text-decoration: none;
+	font-weight: 600;
+	color: var(--dark-blue);
+	font-size: 1.1em;
+	padding-block: 6px;
+	display: block;
+}
+
+@media screen and (min-width: 768px) {
+	header i {
+		display: none;
+	}
+
+	header ul.nav-dropdown {
+		display: none;
+	}
+
+	header ul.nav-links {
+		list-style: none;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 20px;
+	}
+
+	header button {
+		display: block;
+		background: var(--bright-red);
+		color: #fff;
+		padding: 10px 20px;
+		font-size: 1.2em;
+		border-radius: 30px;
+	}
+}
